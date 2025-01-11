@@ -3,10 +3,25 @@
   grid-template-columns: 1fr 4fr;
   gap: 1rem;
   margin-block-end: 2rem;
+
+  .filters {
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      margin-block-start: 0.5rem;
+      > * {
+        flex: 1 0 auto;
+      }
+    }
+  }
+
   .results {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
     gap: 1rem;
+
     > li {
       background-color: transparent;
       color: inherit;
@@ -17,7 +32,7 @@
       border-radius: var(--border-radius);
       &.active {
         background-color: var(--color-primary);
-        color: var(--color-primary--opposite);
+        color: var(--color-primary-opposite);
 
         border-color: var(--color-primary);
       }
