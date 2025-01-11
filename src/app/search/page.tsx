@@ -2,8 +2,7 @@ import { ReactElement } from "react";
 
 import styles from "./page.module.css";
 
-import CardComponent from "@/components/card/card.component";
-import FilterButton from "@/components/filter-button/filter-button.component";
+import FilterComponent from "./component/filter";
 
 const item = Array(100)
   .fill(null)
@@ -12,13 +11,13 @@ export default function page(): ReactElement {
   return (
     <div className={styles.page}>
       <div className={styles.filters}>
-        <CardComponent>
-          <div className={styles.title}>زوح یا فرد</div>
-          <div className={styles.buttons}>
-            <FilterButton>زوج</FilterButton>
-            <FilterButton>فرد</FilterButton>
-          </div>
-        </CardComponent>
+        <FilterComponent
+          title="زوج یا فرد"
+          options={[
+            { value: "even", label: "زوج" },
+            { value: "odd", label: "فرد" },
+          ]}
+        />
       </div>
       <ul className={styles.results}>
         {item.map((item) => (
