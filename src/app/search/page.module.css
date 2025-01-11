@@ -2,10 +2,12 @@
   display: grid;
   grid-template-columns: 1fr 4fr;
   gap: 1rem;
+  align-items: start;
   margin-block-end: 2rem;
 
   .filters {
-   
+    display: grid;
+    gap: 1rem;
   }
 
   .results {

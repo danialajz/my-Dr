@@ -18,6 +18,15 @@ export default function page(): ReactElement {
             { value: "odd", label: "فرد" },
           ]}
         />
+        <FilterComponent
+          title="بخش پذیری"
+          options={[
+            { value: "two", label: "بخش پذیری بر 2" },
+            { value: "tree", label: "بخش پذیری بر 3" },
+            { value: "five", label: "بخش پذیری بر 5" },
+            { value: "seven", label: "بخش پذیری بر 7" },
+          ]}
+        />
       </div>
       <ul className={styles.results}>
         {item.map((item) => (

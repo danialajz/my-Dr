@@ -22,7 +22,7 @@ export default function FilterComponent({ title, options }: Props) {
           ))}
         </div>
       </div>
-      ;
+    
     </CardComponent>
   );
 }
